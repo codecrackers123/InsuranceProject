@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 6, 2014 12:36:55 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+ <class name="insurancebl.Policy" table="HR.POLICY">
+  <id name="policyId" type="java.lang.String">
+   <column name="POLICYID" not-null="true" sql-type="VARCHAR2" unique="true"/>
+   <generator class="assigned"/>
+  </id>
+  <property generated="never" lazy="false" name="policyname" type="java.lang.String">
+   <column name="POLICY_NAME" not-null="true" sql-type="VARCHAR2"/>
+  </property>
+  <property generated="never" lazy="false" name="coverageAmount" type="double">
+   <column name="COVERAGE_AMOUNT" not-null="true" sql-type="NUMBER"/>
+  </property>
+  <property generated="never" lazy="false" name="premiumAmount" type="double">
+   <column name="PREMIUMAMOUNT" not-null="true" sql-type="NUMBER"/>
+  </property>
+  <property generated="never" lazy="false" name="ageGroup" type="java.lang.String">
+   <column name="AGEGROUP" not-null="true" sql-type="VARCHAR2"/>
+  </property>
+ </class>
+</hibernate-mapping>
