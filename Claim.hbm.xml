@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 6, 2014 12:36:55 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+ <class name="insurancebl.Claim" table="HR.CLAIM">
+  <id name="claimId" type="java.lang.String">
+   <column name="CLAIM_ID" not-null="true" sql-type="VARCHAR2" unique="true"/>
+   <generator class="assigned"/>
+  </id>
+  <property generated="never" lazy="false" name="claimDate" type="java.util.Date">
+   <column name="CLAIM_DATE" not-null="true" sql-type="DATE"/>
+  </property>
+  <property generated="never" lazy="false" name="patientName" type="java.lang.String">
+   <column name="PATIENT_NAME" not-null="true" sql-type="VARCHAR2"/>
+  </property>
+  <property generated="never" lazy="false" name="hospitalName" type="java.lang.String">
+   <column name="HOSPITAL_NAME" not-null="true" sql-type="VARCHAR2"/>
+  </property>
+  <property generated="never" lazy="false" name="dateOfAdmission" type="java.util.Date">
+   <column name="DATE_OF_ADMISSION" not-null="true" sql-type="VARCHAR2"/>
+  </property>
+  <property generated="never" lazy="false" name="claimAmount" type="double">
+   <column name="CLAIM_AMOUNT" not-null="true" sql-type="NUMBER"/>
+  </property>
+  <property generated="never" lazy="false" name="claimStatus" type="java.lang.String">
+   <column name="CLAIM_STATUS" not-null="true" sql-type="VARCHAR2"/>
+  </property>
+  <property generated="never" lazy="false" name="claimRemarks" type="java.lang.String">
+   <column name="CLAIM_REMARKS" sql-type="VARCHAR2"/>
+  </property>
+ </class>
+</hibernate-mapping>
