@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 6, 2014 12:36:55 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+ <class name="insurancebl.Message" table="HR.MESSAGE">
+  <id name="messageId" type="java.lang.String">
+   <column name="MESSAGE_ID" not-null="true" sql-type="VARCHAR2" unique="true"/>
+   <generator class="assigned"/>
+  </id>
+  <property generated="never" lazy="false" name="messageFrom" type="java.lang.String">
+   <column name="MESSAGE_FROM" not-null="true" sql-type="VARCHAR2"/>
+  </property>
+  <property generated="never" lazy="false" name="messageTo" type="java.lang.String">
+   <column name="MESSAGE_TO" not-null="true" sql-type="VARCHAR2"/>
+  </property>
+  <property generated="never" lazy="false" name="messageContent" type="java.lang.String">
+   <column name="MESSAGE_CONTENT" not-null="true" sql-type="VARCHAR2"/>
+  </property>
+  <property generated="never" lazy="false" name="messageDate" type="java.util.Date">
+   <column name="MESSAGE_DATE" sql-type="DATE"/>
+  </property>
+  <property generated="never" lazy="false" name="messageStatus" type="java.lang.String">
+   <column name="MESSAGE_STATUS" not-null="false" sql-type="VARCHAR2"/>
+  </property>
+ </class>
+</hibernate-mapping>
